@@ -268,11 +268,11 @@ static int arm_gdb_set_sysreg(CPUState *cs, uint8_t *buf, int reg)
     if (ri) {
         if (cpreg_field_is_64bit(ri)) {
             uint64_t val = ldq_p(buf);
-            raw_write(env, ri, val);
+            write_raw_cp_reg(env, ri, val);
             return 8;
         } else {
             uint32_t val = ldl_p(buf);
-            raw_write(env, ri, val);
+            write_raw_cp_reg(env, ri, val);
             return 4;
         }
     }

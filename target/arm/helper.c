@@ -79,7 +79,7 @@ uint64_t read_raw_cp_reg(CPUARMState *env, const ARMCPRegInfo *ri)
     }
 }
 
-static void write_raw_cp_reg(CPUARMState *env, const ARMCPRegInfo *ri,
+void write_raw_cp_reg(CPUARMState *env, const ARMCPRegInfo *ri,
                              uint64_t v)
 {
     /*
